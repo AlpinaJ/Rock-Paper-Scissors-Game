@@ -8,10 +8,12 @@ const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
+let strike = 0;
 
-function getComputerChoice(){
-    const choices =['r', 'p', 's'];
-    return choices[Math.floor(Math.random()*3)]
+
+function getComputerChoice() {
+    const choices = ['r', 'p', 's'];
+    return choices[Math.floor(Math.random() * 3)]
 }
 
 function convertToWord(letter) {
@@ -20,7 +22,30 @@ function convertToWord(letter) {
     return "Scissors";
 }
 
+function strikeCheck(flag) {
+
+    if (flag === 1) {
+        if (strike < 2) {
+            strike=Math.max(0, strike+1);
+        } else {
+            userScore = userScore + 2;
+            alert("Win strike")
+        }
+    }
+
+    if (flag === -1) {
+        if (strike > -2) {
+            strike= Math.min(0,strike-1);
+        } else {
+            userScore = userScore -3;
+            alert("Loose strike")
+        }
+    }
+
+}
+
 function win(userChoice, computerChoice) {
+    strikeCheck(1);
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
@@ -35,6 +60,7 @@ function win(userChoice, computerChoice) {
 }
 
 function lose(userChoice, computerChoice) {
+    strikeCheck(-1);
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
@@ -83,15 +109,15 @@ function game(userChoice) {
 
 function main() {
 
-    rock_div.addEventListener('click', function() {
+    rock_div.addEventListener('click', function () {
         game("r");
     })
 
-    paper_div.addEventListener('click', function() {
+    paper_div.addEventListener('click', function () {
         game("p");
     })
 
-    scissors_div.addEventListener('click', function() {
+    scissors_div.addEventListener('click', function () {
         game("s");
     })
 }
