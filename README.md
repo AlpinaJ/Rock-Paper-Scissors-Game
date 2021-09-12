@@ -10,4 +10,7 @@ Tutorial from https://www.youtube.com/watch?v=jaVNP3nIAv0
 
 See function *strikeCheck* in app.js.
 
+## Feature 2
+**New game button** added.
 
+The user can push the button, and user, computers, strike counts will become 0.
