@@ -1,16 +1,17 @@
 # Rock-Paper-Scissors-Game
+Игра "камень, ножницы, бумага" по туториалу.
+![Watch the video](./preview.gif)
+## 📌 Описание
+Обычная версия игры со страйками(3 победы или 3 поражения подряд). Так же добавлена кнопка для начала новой игры.
 
-Tutorial from https://www.youtube.com/watch?v=jaVNP3nIAv0
+## ⛏ Стек
+- HTML
+- CSS
+- Javascript
 
-## Feature 1
-**Strikes** added. 
-* When user wins 3 times in a row, he/she gets **win strike**
-* When user looses 3 times in a row, he/she gets **loose strike**
-* Draw does not influence on count of strikes
+## 🌐 Ссылки
+**Ссылка на проект на gh-pages: [Rock-Paper-Scissors-Game](https://alpinaj.github.io/Rock-Paper-Scissors-Game/)**
 
-See function *strikeCheck* in app.js.
+Ссылка на туториал: [туториал](https://www.youtube.com/watch?v=jaVNP3nIAv0)
 
-## Feature 2
-**New game button** added.
 
-The user can push the button, and user, computers, strike counts will become 0.
